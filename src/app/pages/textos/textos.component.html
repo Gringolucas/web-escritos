@@ -1,0 +1,14 @@
+<section class="textos-section">
+    <h2>Mis Escritos</h2>
+    <div class="grid">
+      <div class="card" *ngFor="let escrito of escritos">
+        <img [src]="escrito.imagen" alt="{{ escrito.titulo }}" class="imagen-escrito" />
+        <h3>{{ escrito.titulo }}</h3>
+        <p class="fecha">{{ escrito.fecha }}</p>
+        <p>{{ escrito.resumen }}</p>
+        <button>Leer más</button>
+      </div>
+    </div>
+</section>
+  
+  

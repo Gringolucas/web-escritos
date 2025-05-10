@@ -1,0 +1,20 @@
+<section class="form-container">
+    <h2>Nuevo Escrito</h2>
+    <form (ngSubmit)="guardar()">
+      <input type="text" placeholder="Título" [(ngModel)]="nuevoEscrito.titulo" name="titulo" required />
+  
+      <textarea placeholder="Resumen" [(ngModel)]="nuevoEscrito.resumen" name="resumen"></textarea>
+  
+      <textarea placeholder="Contenido" [(ngModel)]="nuevoEscrito.contenido" name="contenido" rows="6"></textarea>
+  
+      <input type="file" (change)="onImagenSeleccionada($event)" />
+  
+      <div *ngIf="imagenPreview" class="preview">
+        <p>Vista previa de imagen:</p>
+        <img [src]="imagenPreview" alt="Preview imagen" />
+      </div>
+  
+      <button type="submit">Guardar</button>
+    </form>
+</section>
+  
